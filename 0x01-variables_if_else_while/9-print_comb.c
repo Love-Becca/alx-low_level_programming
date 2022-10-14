@@ -7,15 +7,14 @@ int main(void)
 {
 	int c;
 
-	char f;
-
 	for (c = 0; c < 10; c++)
 	{
 		putchar(c + '0');
-	}
-	for (f = 'a'; f <= 'f'; f++)
-	{
-		putchar(f);
+		if (c < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
