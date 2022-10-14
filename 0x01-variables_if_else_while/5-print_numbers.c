@@ -3,20 +3,13 @@
  * main - entry point
  * Return: always 0
  */
-
 int main(void)
 {
 	int c;
 
-	int h;
-
-	for (h = 97; h <= 122; ++h)
+	for (c = 0; c < 10; c++)
 	{
-		putchar(h);
-	}
-	for (c = 65; c <= 90; ++c)
-	{
-		putchar(c);
+		printf("%d", c);
 	}
 	putchar('\n');
 	return (0);
