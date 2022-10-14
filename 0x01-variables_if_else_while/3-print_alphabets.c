@@ -10,14 +10,13 @@ int main(void)
 
 	int h;
 
-
-	for (c = 65; c <= 90; ++c)
-	{
-		putchar(c);
-	}
 	for (h = 97; h <= 122; ++h)
 	{
 		putchar(h);
+	}
+	for (c = 65; c <= 90; ++c)
+	{
+		putchar(c);
 	}
 	putchar('\n');
 	return (0);
