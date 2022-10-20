@@ -11,12 +11,12 @@ int main(void)
 
 	for (c = 1; c < 101; c++)
 	{
-		if (c % 3 == 0)
+		if (c % 15 == 0)
+			printf("FizzBuzz");
+		else if (c % 3 == 0)
 			printf("Fizz");
-		else if (c % 5 == 0)
+		else if ((c % 5) == 0)
 			printf("Buzz");
-		else if ((c % 3 == 0) && (c % 5 == 0))
-			printf("Fizz Buzz");
 		else
 			printf("%d", c);
 
