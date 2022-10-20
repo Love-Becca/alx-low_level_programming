@@ -18,9 +18,9 @@ int main(void)
 		else if ((c % 5) == 0)
 			printf("Buzz");
 		else
-			printf("%d", c);
-
-		printf(" ");
+			printf("%i", c);
+		if (c != 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
