@@ -14,7 +14,7 @@ int prime_num(int b, int m)
 	else if (b % m == 0)
 		return (0);
 	if (b % m != 0)
-		return (prime_num(b, m - 1));
+		return (prime_num(b, m + 1));
 	return (0);
 }
 
