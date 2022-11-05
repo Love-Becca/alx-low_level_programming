@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * main - entry point
  * @argc: count
  * @argv: array
- * Return: 0
+ * Return: 0 if true, 1 if false
  */
 int main(int argc, char *argv[])
 {
