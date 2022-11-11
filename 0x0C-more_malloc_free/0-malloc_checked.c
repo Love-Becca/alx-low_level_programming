@@ -4,14 +4,14 @@
 /**
  * malloc_checked - function that allocate a memory
  * @b: parameter
+ * Return: ptr
  */
 
 void *malloc_checked(unsigned int b)
 {
 	unsigned int *ptr;
 
-	ptr = malloc(b * sizeof(unsigned int));
-	
+	ptr = malloc(b);
 	if (ptr == NULL)
 		exit(98);
 	return (ptr);
