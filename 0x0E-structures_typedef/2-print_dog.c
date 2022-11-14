@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+#include "dog.h"
 
 /**
  * print_dog - prints dog details
@@ -33,6 +33,6 @@ void print_dog(struct dog *d)
 	}
 	else
 	{
-		printf("Owner: %s\n", d->owner)
+		printf("Owner: %s\n", d->owner);
 	}
 }
