@@ -8,8 +8,6 @@
  * @owner: parameter
  * Return: struct
  */
-
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d_dog;
@@ -22,17 +20,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d_dog);
 		return (NULL);
 	}
-
-	for (tname = 0; name[tname]; tname++)	
+	for (tname = 0; name[tname]; tname++)
 		;
 
 	for (downer = 0; owner[downer]; downer++)
 		;
 
-
 	d_dog->name = malloc(tname + 1);
 	d_dog->owner = malloc(downer + 1);
-
 	if (!(d_dog->name) || !(d_dog->owner))
 	{
 		free(d_dog->owner);
@@ -40,7 +35,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d_dog);
 		return (NULL);
 	}
-
 	for (i = 0; i < tname; i++)
 	{
 		d_dog->name[i] = name[i];
