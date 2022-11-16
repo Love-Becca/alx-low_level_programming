@@ -1,4 +1,6 @@
- #include "3-calc.h"
+#include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main- entry point
@@ -9,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int arga, argb, int save;
+	int arga, argb, save;
 	char i;
 	int (*func)(int, int);
 
@@ -33,11 +35,11 @@ int main(int argc, char *argv[])
 
 	if ((i == "/" || i == "%") && argb == 0)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(100);
 	}
 
-	save = func(ara, argb);
+	save = func(arga, argb);
 
 	printf("%d\n", save);
 
