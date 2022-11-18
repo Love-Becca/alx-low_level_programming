@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	const char save[] = "cifs";
 
 	va_start(all, format);
-	while (format && format[i])
+	while (format != NULL && format[i])
 	{
 		while (save[j])
 		{
