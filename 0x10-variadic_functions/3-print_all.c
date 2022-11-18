@@ -10,13 +10,14 @@
 void print_all(const char * const format, ...)
 {
 	va_list all;
-	unsigned int i = 0, j = 0, d = 0;
+	unsigned int i = 0, j, d = 0;
 	char *string;
 	const char save[] = "cifs";
 
 	va_start(all, format);
-	while (format != NULL && format[i])
+	while (format && format[i])
 	{
+		j = 0;
 		while (save[j])
 		{
 			if (format[i] == save[j] && d)
@@ -47,6 +48,5 @@ void print_all(const char * const format, ...)
 				break;
 		} i++;
 	}
-	printf("\n");
-	va_end(all);
+	printf("\n"), va_end(all);
 }
