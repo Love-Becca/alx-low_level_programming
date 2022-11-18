@@ -10,9 +10,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list all;
-	unsigned int i = 0;
-	unsigned int j = 0;
-	unsigned int d = 0;
+	unsigned int i = 0, j = 0, d = 0;
 	char *string;
 	const char save[] = "cifs";
 
@@ -23,10 +21,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == save[j] && d)
 			{
-				printf(",");
+				printf(" , ");
 				break;
-			}
-			j++;
+			} j++;
 		}
 		switch (format[i])
 		{
@@ -48,10 +45,8 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", string);
 				break;
-		}
-		i++;
+		} i++;
 	}
-
 	printf("\n");
 	va_end(all);
 }
