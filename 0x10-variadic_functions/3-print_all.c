@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == save[j] && d)
 			{
-				printf(" , ");
+				printf(", ");
 				break;
 			} j++;
 		}
@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string = va_arg(all, char *), d = 1;
-				if (!string)
+				if (string == NULL)
 				{
 					printf("(nil)");
 					break;
