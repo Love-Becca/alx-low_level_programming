@@ -1,9 +1,9 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * print_listint - prints all elements
  * @h: parameter
+ *
  * Return: count
  */
 
