@@ -25,6 +25,6 @@ int pop_listint(listint_t **head)
 	free(linked);
 
 	*head = save;
-	
+
 	return (list);
 }
