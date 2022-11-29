@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * ree_listint2 - free a list
+ * free_listint2 - free a list
  * @head: node begining
  *
  */
