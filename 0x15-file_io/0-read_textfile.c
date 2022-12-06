@@ -10,27 +10,27 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buf;
+	char *buffer;
 	ssize_t opn, reed, w;
 
 	if (filename == NULL)
 		return (0);
 
-	buf = malloc(sizeof(char) * letters);
+	buffer = malloc(sizeof(char) * letters);
 
-	if (buf == NULL)
+	if (buffer == NULL)
 		return (0);
 
 	opn = open(filename, o_RDONLY);
-	reed = read(opn, buf, letters);
+	reed = read(opn, buffer, letters);
 	w = write(STDOUT_FILENO, buf, reed);
 
 	if (opn == -1 || reed == -1 || w == -1 || w != reed)
 	{
-		free(buf);
+		free(buffer);
 		return (0);
 	}
-	free(buf);
+	free(buffer);
 	close(opn);
 
 	return (w);
